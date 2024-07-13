@@ -1,0 +1,42 @@
+{
+  "name": "booking_app",
+  "version": "1.0.0",
+  "description": "booking app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder.js",
+    "data:destroy": "node backend/seeder.js -d",
+    "build": "npm install && npm install --prefix frontend && npm run build:frontend",
+    "build:frontend": "cd frontend && npx vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmidou09/booking_app.git"
+  },
+  "author": "mehdi ahmidou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmidou09/booking_app/issues"
+  },
+  "homepage": "https://github.com/ahmidou09/booking_app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.4.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.0"
+  }
+}
