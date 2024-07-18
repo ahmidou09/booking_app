@@ -25,7 +25,6 @@ const Hero = styled.div`
   background-image: url("hero.jpg");
   background-size: cover;
   background-position: center;
-  border: 1px solid red;
 `;
 
 const Overlay = styled.div`
@@ -35,6 +34,7 @@ const Overlay = styled.div`
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 `;
 
 const Container = styled.div`
@@ -43,10 +43,14 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
-  position: absolute;
   z-index: 1;
-  padding: 20px;
+  padding: 3rem;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
 `;
 
 const Title = styled.h1`

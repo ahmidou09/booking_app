@@ -15,20 +15,26 @@ const SearchBar = () => {
 
 const SearchContainer = styled.div`
   display: flex;
-  background-color: white;
-  padding: 10px;
+  background-color: #ffb700;
+  padding: 3px;
   border-radius: 4px;
-  gap: 10px;
-
+  gap: 3px;
+  border: 1px solid #ffb700;
   position: absolute;
-  bottom: 0%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const Input = styled.input`
   flex: 1;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 const SearchButton = styled.button`
