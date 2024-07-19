@@ -8,7 +8,7 @@ const Navbar = () => {
         <Logo>Booking.com</Logo>
         <NavButtons>
           <Button>Register</Button>
-          <Button primary>Sign in</Button>
+          <Button>Sign in</Button>
         </NavButtons>
       </Container>
     </Nav>
@@ -40,8 +40,7 @@ const NavButtons = styled.div`
 `;
 
 const Button = styled.button`
-  background-color: ${(props) => (props.primary ? "white" : "#0071c2")};
-  color: ${(props) => (props.primary ? "#0071c2" : "white")};
+  color: #003580;
   border: none;
   padding: 8px 16px;
   border-radius: 4px;

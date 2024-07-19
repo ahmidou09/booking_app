@@ -1,6 +1,9 @@
 import React from "react";
-import CarouselContainer from "../components/CarouselContainer";
+import InterestedSection from "../components/InterestedSection/InterestedSection";
 import styled from "styled-components";
+import OffersSection from "../components/OffersSection/OffersSection";
+import BrowseSection from "../components/BrowseSection/BrowseSection";
+import TrendingDestinations from "../components/TrendingDestinations/TrendingDestinations";
 
 const HomeContainer = styled.div`
   max-width: 120rem;
@@ -11,7 +14,10 @@ const HomeContainer = styled.div`
 const Home = () => {
   return (
     <HomeContainer>
-      <CarouselContainer />
+      <InterestedSection />
+      <OffersSection />
+      <BrowseSection />
+      <TrendingDestinations />
     </HomeContainer>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-//import backgroundImage from "/hero.jpg";
 import SearchBar from "./SearchBar";
 
 const HeroSection = () => {

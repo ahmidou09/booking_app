@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "./Carousel";
 import styled from "styled-components";
 
-const CarouselContainer = () => {
+const InterestedSection = () => {
   const items = [
     {
       image: "https://picsum.photos/seed/picsum/200/300",
@@ -70,4 +70,4 @@ const Title = styled.h2`
   margin-bottom: 3rem;
 `;
 
-export default CarouselContainer;
+export default InterestedSection;
