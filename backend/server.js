@@ -5,7 +5,9 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import { errorHandler, notFound } from "./middleware/errorMiddleware.js";
-import { testController } from "./controllers/testController.js";
+import userRoutes from "./routes/userRoutes.js";
+import hetelRoutes from "./routes/hotelRoutes.js";
+import bookingRoutes from "./routes/bookingRoutes.js";
 
 dotenv.config();
 
@@ -26,7 +28,9 @@ app.use(
   })
 );
 
-app.use("/api/test", testController);
+app.use("/api/users", userRoutes);
+app.use("/api/hotels", hetelRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

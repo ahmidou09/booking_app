@@ -6,6 +6,10 @@ import Header from "../components/Header/Header";
 
 const StyledAppLayout = styled.div`
   width: 100%;
+
+  main {
+    padding: 4rem 0;
+  }
 `;
 
 function AppLayout() {
