@@ -1,22 +1,49 @@
 import React from "react";
 import styled from "styled-components";
-import { FaHeart } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { FaRegHeart, FaHeart } from "react-icons/fa";
+import { toast } from "react-toastify";
+import {
+  removeFromNextTrip,
+  addToNextTrip,
+} from "../../redux/slices/nextTripSlice";
 
-const Card = ({ property }) => {
+const Card = ({ hotel }) => {
+  const dispatch = useDispatch();
+  const { nextTripItems } = useSelector((state) => state.nextTrip);
+
+  const handleAddToNextTrip = (hotel) => {
+    if (nextTripItems.find((x) => x._id === hotel._id)) {
+      dispatch(removeFromNextTrip(hotel._id));
+      toast.success("Removed from next trip");
+    } else {
+      dispatch(addToNextTrip(hotel));
+      toast.success("Added to next trip");
+    }
+  };
+
+  const isHotelInNextTrip = (hotelId) => {
+    return nextTripItems.some((item) => item._id === hotelId);
+  };
   return (
     <CardContainer>
-      <Image src={property.image} alt={property.title} />
+      <Image src={hotel?.images[0]} alt={hotel.name} />
       <Info>
-        <Title>{property.title}</Title>
-        <Location>{property.location}</Location>
+        <Title>{hotel.name}</Title>
+        <Location>
+          {hotel.location.city}, {hotel.location.state}
+        </Location>
         <Rating>
-          <RatingScore>{property.rating}</RatingScore>
-          <Reviews>{property.reviews}</Reviews>
+          <RatingScore>{hotel.rating}</RatingScore>
         </Rating>
       </Info>
-      <HeartIcon>
-        <FaHeart />
-      </HeartIcon>
+      <HeartButton onClick={() => handleAddToNextTrip(hotel)}>
+        {isHotelInNextTrip(hotel._id) ? (
+          <FaHeart size={24} style={{ color: "var(--color-primary-1)" }} />
+        ) : (
+          <FaRegHeart size={24} />
+        )}
+      </HeartButton>
     </CardContainer>
   );
 };
@@ -68,17 +95,20 @@ const RatingScore = styled.span`
   margin-right: 8px;
 `;
 
-const Reviews = styled.span`
-  font-size: 14px;
-  color: grey;
-`;
-
-const HeartIcon = styled.div`
+const HeartButton = styled.button`
+  background: white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: none;
+  color: var(--color-grey-3);
   position: absolute;
-  top: 10px;
-  right: 10px;
-  color: #ff385c;
+  top: 1.5rem;
+  right: 1.5rem;
   cursor: pointer;
+
+  &:hover {
+    color: var(--color-primary-1);
+  }
 `;
 
 export default Card;

@@ -7,8 +7,9 @@ import {
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-const Carousel = ({ items }) => {
+const Carousel = ({ hotels }) => {
   return (
     <CarouselContainer>
       <Slide
@@ -17,8 +18,10 @@ const Carousel = ({ items }) => {
         indicators={false}
         {...properties}
       >
-        {items.map((item, index) => (
-          <Card key={index} property={item} />
+        {hotels.map((item, index) => (
+          <Link key={index} to={`/hotels/${item._id}`}>
+            <Card hotel={item} />
+          </Link>
         ))}
       </Slide>
     </CarouselContainer>

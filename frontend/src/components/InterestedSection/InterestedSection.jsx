@@ -1,64 +1,23 @@
 import React from "react";
 import Carousel from "./Carousel";
 import styled from "styled-components";
+import { useGetHotelsQuery } from "../../redux/slices/hotelApiSlice";
+import Loading from "../../ui/Loading";
 
 const InterestedSection = () => {
-  const items = [
-    {
-      image: "https://picsum.photos/seed/picsum/200/300",
-      title: "Hotel Soleil Imlil",
-      location: "Imlil, Morocco",
-      rating: 8.8,
-      reviews: "Fabulous · 64 reviews",
-    },
-    {
-      image: "https://picsum.photos/seed/picsum/200/300",
-      title: "Riad Oussagou",
-      location: "Imlil, Morocco",
-      rating: 9.2,
-      reviews: "Superb · 329 reviews",
-    },
-    {
-      image: "https://picsum.photos/seed/picsum/200/300",
-      title: "Dar Aymane",
-      location: "Imlil, Morocco",
-      rating: 9.4,
-      reviews: "Superb · 202 reviews",
-    },
-    {
-      image: "https://picsum.photos/seed/picsum/200/300",
-      title: "Riad Atlas Toubkal",
-      location: "Imlil, Morocco",
-      rating: 9.1,
-      reviews: "Superb · 312 reviews",
-    },
-    {
-      image: "https://picsum.photos/seed/picsum/200/300",
-      title: "Hotel Soleil Imlil",
-      location: "Imlil, Morocco",
-      rating: 8.8,
-      reviews: "Fabulous · 64 reviews",
-    },
-    {
-      image: "https://picsum.photos/seed/picsum/200/300",
-      title: "Riad Oussagou",
-      location: "Imlil, Morocco",
-      rating: 9.2,
-      reviews: "Superb · 329 reviews",
-    },
-    {
-      image: "https://picsum.photos/seed/picsum/200/300",
-      title: "Dar Aymane",
-      location: "Imlil, Morocco",
-      rating: 9.4,
-      reviews: "Superb · 202 reviews",
-    },
-  ];
+  const { data: hotels, isLoading, error } = useGetHotelsQuery();
 
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    console.log(error);
+  }
   return (
     <Container>
       <Title>Still interested in these properties?</Title>
-      <Carousel items={items} />
+      <Carousel hotels={hotels} />
     </Container>
   );
 };
