@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { FaRegHeart, FaHeart } from "react-icons/fa";
 import { toast } from "react-toastify";
 import {
@@ -27,16 +28,18 @@ const Card = ({ hotel }) => {
   };
   return (
     <CardContainer>
-      <Image src={hotel?.images[0]} alt={hotel.name} />
-      <Info>
-        <Title>{hotel.name}</Title>
-        <Location>
-          {hotel.location.city}, {hotel.location.state}
-        </Location>
-        <Rating>
-          <RatingScore>{hotel.rating}</RatingScore>
-        </Rating>
-      </Info>
+      <Link to={`/hotels/${hotel._id}`}>
+        <Image src={hotel?.images[0]} alt={hotel.name} />
+        <Info>
+          <Title>{hotel.name}</Title>
+          <Location>
+            {hotel.location.city}, {hotel.location.state}
+          </Location>
+          <Rating>
+            <RatingScore>{hotel.rating}</RatingScore>
+          </Rating>
+        </Info>
+      </Link>
       <HeartButton onClick={() => handleAddToNextTrip(hotel)}>
         {isHotelInNextTrip(hotel._id) ? (
           <FaHeart size={24} style={{ color: "var(--color-primary-1)" }} />
@@ -105,6 +108,7 @@ const HeartButton = styled.button`
   top: 1.5rem;
   right: 1.5rem;
   cursor: pointer;
+  z-index: 999;
 
   &:hover {
     color: var(--color-primary-1);

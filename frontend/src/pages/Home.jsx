@@ -4,6 +4,7 @@ import styled from "styled-components";
 import OffersSection from "../components/OffersSection/OffersSection";
 import BrowseSection from "../components/BrowseSection/BrowseSection";
 import TrendingDestinations from "../components/TrendingDestinations/TrendingDestinations";
+import Header from "../components/Header/Header";
 
 const HomeContainer = styled.div`
   max-width: 120rem;
@@ -13,12 +14,15 @@ const HomeContainer = styled.div`
 
 const Home = () => {
   return (
-    <HomeContainer>
-      <InterestedSection />
-      <OffersSection />
-      <BrowseSection />
-      <TrendingDestinations />
-    </HomeContainer>
+    <>
+      <Header />
+      <HomeContainer>
+        <InterestedSection />
+        <OffersSection />
+        <BrowseSection />
+        <TrendingDestinations />
+      </HomeContainer>
+    </>
   );
 };
 

@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { useSearchHotelsQuery } from "../../redux/slices/hotelApiSlice";
+import { useNavigate } from "react-router-dom";
 
 const SearchBar = () => {
+  const [city, setCity] = useState("");
+  const navigate = useNavigate();
+  const { data: searchResults, refetch } = useSearchHotelsQuery(city);
+
+  console.log(searchResults);
+
+  const handleSearch = async () => {
+    if (city) {
+      await refetch();
+      navigate("/search-results", { state: { searchResults } });
+    }
+  };
+
   return (
     <SearchContainer>
-      <Input placeholder="Where are you going?" />
+      <Input
+        placeholder="Where are you going?"
+        value={city}
+        onChange={(e) => setCity(e.target.value)}
+        required
+      />
       <Input placeholder="Check-in date" />
       <Input placeholder="Check-out date" />
       <Input placeholder="2 adults · 0 children · 1 room" />
-      <SearchButton>Search</SearchButton>
+      <SearchButton onClick={handleSearch}>Search</SearchButton>
     </SearchContainer>
   );
 };
@@ -31,6 +51,7 @@ const Input = styled.input`
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 4px;
+  color: var(--color-black);
 
   &:focus {
     outline: none;

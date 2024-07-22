@@ -80,4 +80,27 @@ const deleteHotel = asyncHandler(async (req, res) => {
   }
 });
 
-export { getHotels, getHotelById, createHotel, updateHotel, deleteHotel };
+// @desc    Search hotels by city
+// @route   GET /api/hotels/search
+// @access  Public
+const searchHotels = asyncHandler(async (req, res) => {
+  const { city } = req.query;
+  if (city) {
+    const hotels = await Hotel.find({
+      "location.city": { $regex: city, $options: "i" },
+    });
+    res.status(200).json(hotels);
+  } else {
+    res.status(400);
+    throw new Error("City is required");
+  }
+});
+
+export {
+  getHotels,
+  getHotelById,
+  createHotel,
+  updateHotel,
+  deleteHotel,
+  searchHotels,
+};

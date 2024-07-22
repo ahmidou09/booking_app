@@ -13,6 +13,7 @@ import TermsOfUse from "./pages/TermsOfUse";
 import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
 import HotelView from "./pages/HotelView";
+import SearchResults from "./pages/SearchResults";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
             <Route path="terms-of-use" element={<TermsOfUse />} />
             <Route path="faq" element={<Faq />} />
+            <Route path="search-results" element={<SearchResults />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

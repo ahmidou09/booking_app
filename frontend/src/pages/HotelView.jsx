@@ -5,10 +5,11 @@ import HeaderSection from "./HotelView/HeaderSection";
 import DetailsSection from "./HotelView/DetailsSection";
 import AvailabilitySection from "./HotelView/AvailabilitySection";
 import styled from "styled-components";
+import Header from "../components/Header/Header";
 
 const Container = styled.div`
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 8rem auto;
 `;
 
 const HotelView = () => {
@@ -20,14 +21,17 @@ const HotelView = () => {
   }
 
   return (
-    <Container>
-      <HeaderSection hotel={hotel} />
-      <DetailsSection
-        description={hotel.description}
-        amenities={hotel.amenities}
-      />
-      <AvailabilitySection rooms={hotel.rooms} />
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <HeaderSection hotel={hotel} />
+        <DetailsSection
+          description={hotel.description}
+          amenities={hotel.amenities}
+        />
+        <AvailabilitySection rooms={hotel.rooms} />
+      </Container>
+    </>
   );
 };
 

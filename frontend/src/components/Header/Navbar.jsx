@@ -24,7 +24,9 @@ const Navbar = () => {
   return (
     <Nav>
       <Container>
-        <Logo>Booking.com</Logo>
+        <Logo>
+          <Link to="/">Booking.com</Link>
+        </Logo>
 
         {userInfo ? (
           <UserInfo>

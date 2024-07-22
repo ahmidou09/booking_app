@@ -41,6 +41,12 @@ export const hotelsApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: ["Hotel"],
     }),
+    searchHotels: builder.query({
+      query: (city) => ({
+        url: `${BASE_URL}${HOTELS_URL}/search?city=${city}`,
+        method: "GET",
+      }),
+    }),
   }),
 });
 
@@ -50,4 +56,5 @@ export const {
   useCreateHotelMutation,
   useUpdateHotelMutation,
   useDeleteHotelMutation,
+  useSearchHotelsQuery, // Change this to query
 } = hotelsApiSlice;

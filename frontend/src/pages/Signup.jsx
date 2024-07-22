@@ -89,9 +89,6 @@ const Signup = () => {
   return (
     <Container>
       <SignUpContainer>
-        <ImageContainer>
-          <SVGImage src="/casablanca.jpg" alt="SignUp Illustration" />
-        </ImageContainer>
         <SignUpFormContainer>
           <Title>Sign Up to Exclusive</Title>
 
@@ -132,21 +129,10 @@ const SignUpContainer = styled.div`
   }
 `;
 
-const ImageContainer = styled.div`
-  flex: 1;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-`;
-
-const SVGImage = styled.img`
-  width: 100%;
-`;
-
 const SignUpFormContainer = styled.div`
-  flex: 1;
-  max-width: 50rem;
+  width: 50rem;
   padding: 4rem;
+  margin: 0 auto;
   background-color: var(--color-white);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
