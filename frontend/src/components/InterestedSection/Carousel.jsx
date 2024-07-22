@@ -43,7 +43,7 @@ const svgStyle = {
   fontSize: "4rem",
   transition: "all 0.3s ease-in-out",
   padding: "0.5rem",
-  backgroundColor: "white",
+  backgroundColor: "var(--color-white)",
 };
 
 const properties = {

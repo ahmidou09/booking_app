@@ -38,12 +38,12 @@ const buttonStyle = {
 };
 
 const svgStyle = {
-  color: "grey",
+  color: "var(--color-grey-2)",
   borderRadius: "50%",
   fontSize: "4rem",
   transition: "all 0.3s ease-in-out",
   padding: "0.5rem",
-  backgroundColor: "white",
+  backgroundColor: "var(--color-white)",
 };
 
 const properties = {

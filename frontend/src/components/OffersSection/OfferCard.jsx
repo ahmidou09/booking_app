@@ -17,10 +17,10 @@ const OfferCard = ({ offer }) => {
 const CardContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 250px;
-  border-radius: 8px;
+  height: 25rem;
+  border-radius: 0.8rem;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
 `;
 
 const Image = styled.img`
@@ -31,29 +31,29 @@ const Image = styled.img`
 
 const TextOverlay = styled.div`
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  color: var(--color-white);
 `;
 
 const Title = styled.h3`
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 `;
 
 const Description = styled.p`
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
 `;
 
 const Button = styled.button`
-  background-color: #0071c2;
-  color: white;
-  padding: 10px 20px;
+  background-color: var(--color-primary-3);
+  color: var(--color-white);
+  padding: 1rem 2rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 0.4rem;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1.6rem;
 `;
 
 export default OfferCard;

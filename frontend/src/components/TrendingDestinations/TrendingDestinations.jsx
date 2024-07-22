@@ -32,25 +32,25 @@ const TrendingDestinations = () => {
 };
 
 const Section = styled.div`
-  padding: 20px;
+  padding: 2rem;
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 `;
 
 const SectionSubtitle = styled.p`
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #555;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: var(--color-grey-4);
 `;
 
 const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(2, 22rem);
-  gap: 20px;
+  gap: 2rem;
 
   & > :nth-child(1),
   & > :nth-child(2) {

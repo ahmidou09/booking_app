@@ -27,14 +27,14 @@ const SectionContainer = styled.div`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 `;
 
 const SectionSubtitle = styled.p`
-  font-size: 16px;
-  color: grey;
-  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: var(--color-grey-4);
+  margin-bottom: 2rem;
 `;
 
 export default OffersSection;

@@ -44,7 +44,7 @@ const Container = styled.div`
 const Content = styled.div`
   z-index: 1;
   padding: 3rem;
-  color: white;
+  color: var(--color-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,23 +53,23 @@ const Content = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 3.6rem;
+  margin-bottom: 1rem;
 `;
 
 const Subtitle = styled.p`
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
 `;
 
 const Button = styled.button`
-  background-color: #0071c2;
-  color: white;
+  background-color: var(--color-primary-3);
+  color: var(--color-white);
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 
   &:hover {
     opacity: 0.8;

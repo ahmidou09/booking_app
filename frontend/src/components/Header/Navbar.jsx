@@ -49,7 +49,7 @@ const Navbar = () => {
 };
 
 const Nav = styled.nav`
-  background-color: #003580;
+  background-color: var(--color-primary-3);
 `;
 
 const Container = styled.div`
@@ -58,25 +58,25 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 1.6rem;
 `;
 
 const Logo = styled.div`
-  color: white;
-  font-size: 24px;
+  color: var(--color-white);
+  font-size: 2.4rem;
   font-weight: bold;
 `;
 
 const NavButtons = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 0.8rem;
 `;
 
 const Button = styled.button`
-  color: #003580;
+  color: var(--color-primary-3);
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.4rem;
   cursor: pointer;
 
   &:hover {
@@ -93,7 +93,7 @@ const UserInfo = styled.div`
 const NameOfUser = styled.span`
   display: block;
   font-size: 1.4rem;
-  color: white;
+  color: var(--color-white);
 `;
 
 export default Navbar;

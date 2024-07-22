@@ -54,35 +54,35 @@ const Card = ({ hotel }) => {
 const CardContainer = styled.div`
   position: relative;
   padding-bottom: 1rem;
-  width: 250px;
-  margin: 0 10px;
-  background-color: white;
-  border-radius: 8px;
+  width: 25rem;
+  margin: 0 1rem;
+  background-color: var(--color-white);
+  border-radius: 0.8rem;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-grey-2);
 `;
 
 const Image = styled.img`
   width: 100%;
-  height: 150px;
+  height: 15rem;
   object-fit: cover;
 `;
 
 const Info = styled.div`
-  padding: 10px;
+  padding: 1rem;
 `;
 
 const Title = styled.h3`
-  font-size: 18px;
+  font-size: 1.8rem;
   margin: 0;
 `;
 
 const Location = styled.p`
-  font-size: 14px;
-  color: grey;
-  margin: 5px 0;
+  font-size: 1.4rem;
+  color: var(--color-grey-4);
+  margin: 0.5rem 0;
 `;
 
 const Rating = styled.div`
@@ -91,15 +91,15 @@ const Rating = styled.div`
 `;
 
 const RatingScore = styled.span`
-  background-color: #0071c2;
-  color: white;
-  padding: 2px 6px;
-  border-radius: 4px;
-  margin-right: 8px;
+  background-color: var(--color-primary-3);
+  color: var(--color-white);
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.4rem;
+  margin-right: 0.8rem;
 `;
 
 const HeartButton = styled.button`
-  background: white;
+  background: var(--color-white);
   border-radius: 50%;
   padding: 0.5rem;
   border: none;

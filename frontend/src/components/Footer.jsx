@@ -10,7 +10,7 @@ import {
 import { Link } from "react-router-dom";
 
 const FooterContainer = styled.footer`
-  background-color: #f9f9f9;
+  background-color: var(--color-grey-0);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,10 +21,10 @@ const FooterTop = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
+  max-width: 120rem;
   margin-bottom: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: var(--break-point-mob)) {
     flex-direction: column;
     align-items: center;
   }
@@ -35,13 +35,13 @@ const Logo = styled.div`
   align-items: center;
   margin-bottom: 1rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: var(--break-point-mob)) {
     margin-bottom: 0;
   }
 `;
 
 const LogoImage = styled.img`
-  height: 32px;
+  height: 3.2rem;
   margin-right: 1rem;
 `;
 
@@ -49,9 +49,9 @@ const FooterLinks = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 600px;
+  max-width: 60rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: var(--break-point-mob)) {
     flex-direction: column;
     align-items: center;
   }
@@ -67,9 +67,10 @@ const LinksColumn = styled.div`
   strong {
     margin-bottom: 0.5rem;
   }
+
   & a {
     margin-bottom: 0.5rem;
-    color: #6b7280;
+    color: var(--color-grey-3);
     text-decoration: none;
   }
 `;
@@ -78,7 +79,7 @@ const FooterBottom = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 120rem;
   width: 100%;
   margin-top: 2rem;
 `;
@@ -89,7 +90,7 @@ const SocialIcons = styled.div`
   margin-top: 1rem;
 
   & a {
-    color: #6b7280;
+    color: var(--color-grey-3);
     margin: 0 0.5rem;
     font-size: 1.5rem;
     text-decoration: none;
@@ -98,7 +99,7 @@ const SocialIcons = styled.div`
 
 const Copyright = styled.div`
   text-align: center;
-  color: #6b7280;
+  color: var(--color-grey-3);
 `;
 
 const Footer = () => {

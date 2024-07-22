@@ -28,19 +28,19 @@ const AvailabilitySection = ({ rooms }) => {
 };
 
 const AvailabilityContainer = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 `;
 
 const AvailabilityTitle = styled.h2`
   font-size: 1.8rem;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 `;
 
 const Room = styled.div`
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e0e0e0;
-  padding: 10px 0;
+  border-bottom: 1px solid var(--color-grey-2);
+  padding: 1rem 0;
 `;
 
 const RoomInfo = styled.div`
@@ -49,12 +49,12 @@ const RoomInfo = styled.div`
 
 const RoomType = styled.h3`
   font-size: 1.6rem;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 `;
 
 const RoomDetails = styled.p`
   font-size: 1.2rem;
-  color: #666;
+  color: var(--color-grey-4);
 `;
 
 const RoomPricing = styled.div`
@@ -64,20 +64,21 @@ const RoomPricing = styled.div`
 
 const Price = styled.p`
   font-size: 1.5rem;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 `;
 
 const ReserveButton = styled.button`
-  padding: 10px 15px;
-  background-color: ${(props) => (props.disabled ? "#ccc" : "#007bff")};
-  color: white;
+  padding: 1rem 1.5rem;
+  background-color: ${(props) =>
+    props.disabled ? "var(--color-grey-5)" : "var(--color-primary-3)"};
+  color: var(--color-white);
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 
   &:hover {
-    background-color: ${(props) => (props.disabled ? "#ccc" : "#0056b3")};
+    background-color: ${(props) =>
+      props.disabled ? "var(--color-grey-5)" : "var(--color-primary-2)"};
   }
 `;
-
 export default AvailabilitySection;

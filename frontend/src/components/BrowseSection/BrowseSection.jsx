@@ -21,12 +21,12 @@ const BrowseSection = () => {
 };
 
 const SectionContainer = styled.div`
-  padding: 20px;
+  padding: 2rem;
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
 `;
 
 export default BrowseSection;

@@ -15,25 +15,25 @@ const DetailsSection = ({ description, amenities }) => {
 };
 
 const DetailsContainer = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 `;
 
 const Description = styled.p`
   font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 20px;
+  color: var(--color-grey-3);
+  margin-bottom: 2rem;
 `;
 
 const Amenities = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 1rem;
 `;
 
 const Amenity = styled.span`
-  background: #e0e0e0;
-  padding: 5px 10px;
-  border-radius: 5px;
+  background: var(--color-grey-2);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
   font-size: 1.2rem;
 `;
 

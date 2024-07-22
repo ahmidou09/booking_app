@@ -16,9 +16,10 @@ const DestinationCard = ({ destination }) => {
 const Card = styled.div`
   position: relative;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
+
   &:hover {
     transform: scale(1.01);
   }
@@ -32,10 +33,10 @@ const Image = styled.img`
 
 const Overlay = styled.div`
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  bottom: 1rem;
+  left: 1rem;
+  color: var(--color-white);
+  text-shadow: 0.1rem 0.1rem 0.4rem rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
 `;
@@ -46,7 +47,7 @@ const DestinationName = styled.span`
 `;
 
 const Flag = styled.span`
-  margin-top: 4px;
+  margin-top: 0.4rem;
   font-size: 1rem;
 `;
 

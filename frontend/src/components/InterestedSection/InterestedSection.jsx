@@ -25,7 +25,7 @@ const InterestedSection = () => {
 const Container = styled.div``;
 
 const Title = styled.h2`
-  font-size: 24px;
+  font-size: 2.4rem;
   margin-bottom: 3rem;
 `;
 

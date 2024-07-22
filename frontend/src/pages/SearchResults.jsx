@@ -40,30 +40,30 @@ const SearchResults = () => {
 const ResultsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 1.6rem;
 `;
 
 const HotelCard = styled.div`
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 16px;
-  width: 300px;
+  border: 1px solid var(--color-grey-2);
+  border-radius: 0.4rem;
+  padding: 1.6rem;
+  width: 30rem;
 
   img {
     max-width: 100%;
-    border-radius: 4px;
+    border-radius: 0.4rem;
   }
 `;
 
 const Location = styled.div`
-  font-size: 14px;
-  color: #555;
+  font-size: 1.4rem;
+  color: var(--color-grey-4);
 `;
 
 const NoResults = styled.div`
-  font-size: 18px;
-  color: #666;
-  margin: 20px;
+  font-size: 1.8rem;
+  color: var(--color-grey-4);
+  margin: 2rem;
 `;
 
 export default SearchResults;

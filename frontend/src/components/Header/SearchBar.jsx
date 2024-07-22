@@ -32,14 +32,15 @@ const SearchBar = () => {
     </SearchContainer>
   );
 };
+//background-color: #ffb700;
 
 const SearchContainer = styled.div`
   display: flex;
-  background-color: #ffb700;
-  padding: 3px;
-  border-radius: 4px;
-  gap: 3px;
-  border: 1px solid #ffb700;
+  background-color: var(--color-accent-4);
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  gap: 0.3rem;
+  border: 1px solid var(--color-accent-4);
   position: absolute;
   top: 100%;
   left: 50%;
@@ -48,9 +49,9 @@ const SearchContainer = styled.div`
 
 const Input = styled.input`
   flex: 1;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 1.5rem;
+  border: 1px solid var(--color-grey-2);
+  border-radius: 0.4rem;
   color: var(--color-black);
 
   &:focus {
@@ -59,11 +60,11 @@ const Input = styled.input`
 `;
 
 const SearchButton = styled.button`
-  background-color: #0071c2;
-  color: white;
+  background-color: var(--color-primary-3);
+  color: var(--color-white);
   border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
   cursor: pointer;
 
   &:hover {

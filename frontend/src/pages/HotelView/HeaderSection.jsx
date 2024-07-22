@@ -53,28 +53,28 @@ const HeaderSection = ({ hotel }) => {
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 `;
 
 const HeaderInfo = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 `;
 
 const Title = styled.h1`
   font-size: 2rem;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 `;
 
 const Address = styled.p`
   font-size: 1.1rem;
-  color: #666;
+  color: var(--color-grey-4);
 `;
 
 const CardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(3, 25rem);
-  gap: 10px;
+  gap: 1rem;
   overflow: hidden;
 
   & > :nth-child(1) {
@@ -122,7 +122,6 @@ const Image = styled.img`
   object-fit: cover;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   cursor: pointer;
 `;
 
@@ -130,8 +129,8 @@ const SlideImage = styled.img`
   width: 100%;
   height: 50rem;
   object-fit: cover;
-  border-radius: 10px;
-  padding: 5px;
+  border-radius: 1rem;
+  padding: 0.5rem;
 `;
 
 const PopupOverlay = styled.div`
@@ -149,14 +148,14 @@ const PopupOverlay = styled.div`
 
 const PopupContent = styled.div`
   width: 95%;
-  border-radius: 8px;
+  border-radius: 0.8rem;
   position: relative;
 `;
 
 const CloseButton = styled.span`
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1rem;
+  right: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
 `;
