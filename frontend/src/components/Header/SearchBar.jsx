@@ -32,7 +32,6 @@ const SearchBar = () => {
     </SearchContainer>
   );
 };
-//background-color: #ffb700;
 
 const SearchContainer = styled.div`
   display: flex;

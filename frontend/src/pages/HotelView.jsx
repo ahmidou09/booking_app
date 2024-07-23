@@ -5,11 +5,18 @@ import HeaderSection from "./HotelView/HeaderSection";
 import DetailsSection from "./HotelView/DetailsSection";
 import AvailabilitySection from "./HotelView/AvailabilitySection";
 import styled from "styled-components";
-import Header from "../components/Header/Header";
+import SearchBar from "../components/Header/SearchBar";
 
 const Container = styled.div`
   max-width: 1200px;
   margin: 8rem auto;
+`;
+
+const Hero = styled.div`
+  position: relative;
+  height: 5rem;
+  background-color: var(--color-primary-3);
+  margin-bottom: 8rem;
 `;
 
 const HotelView = () => {
@@ -22,7 +29,9 @@ const HotelView = () => {
 
   return (
     <>
-      <Header />
+      <Hero>
+        <SearchBar />
+      </Hero>
       <Container>
         <HeaderSection hotel={hotel} />
         <DetailsSection
